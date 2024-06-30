@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.usermail {
+  font-weight: 700;
+  color: #e84a5f;
+}
+
+.logoutBtn {
+  padding: 5px 10px;
+  transition: border-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.logoutBtn:hover,
+.logoutBtn:active {
+  border-color: #e84a5f;
+  background-color: #e84a5f;
+  color: white;
+}

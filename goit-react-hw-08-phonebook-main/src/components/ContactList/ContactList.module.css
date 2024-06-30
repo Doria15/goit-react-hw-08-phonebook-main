@@ -1,0 +1,12 @@
+.contactList {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.contactsText {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(236, 109, 109);
+  font-style: italic;
+}
