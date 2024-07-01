@@ -5,6 +5,10 @@ import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice';
 import { filterReducer } from './filter/filterSlice';
 import { contactsReducer } from './contacts/contactsSlice';
+//START OF TEAM PROJECT
+// import { persistedAuthReducer } from './auth/authSlice';
+// import { persistedDailyRateReducer } from './dailyRate/dailyRateSlice';
+// import { productsReducer } from './products/productsSlice';
 
 // Persisting token field from auth slice to localstorage
 const authPersistConfig = {

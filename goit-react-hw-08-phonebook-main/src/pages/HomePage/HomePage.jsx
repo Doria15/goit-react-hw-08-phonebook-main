@@ -10,6 +10,10 @@ const HomePage = () => {
     setOpenModal(true);
   };
 
+  const closeModal = () => {
+    setOpenModal(false);
+  };
+
   return (
     <HelmetProvider>
       <Helmet>
@@ -20,9 +24,7 @@ const HomePage = () => {
         <button className={css.startBtn} onClick={displayModal}>
           Start Losing Weight
         </button>
-      </div>
-      <div className={css.modalContainer}>
-        {openModal && <Modal modalVisibility={setOpenModal} />}
+        {openModal ? <Modal closeModal={closeModal} /> : ''}
       </div>
     </HelmetProvider>
   );
