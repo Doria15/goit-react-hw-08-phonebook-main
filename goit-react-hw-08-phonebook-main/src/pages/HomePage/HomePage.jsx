@@ -6,6 +6,10 @@ import css from './HomePage.module.css';
 const HomePage = () => {
   const [openModal, setOpenModal] = useState(false);
 
+  const displayModal = () => {
+    setOpenModal(true);
+  };
+
   return (
     <HelmetProvider>
       <Helmet>
@@ -13,17 +17,12 @@ const HomePage = () => {
       </Helmet>
       <div className={css.container}>
         <h1 className={css.title}>Welcome to Phonebook 📓</h1>
-        <button
-          className={css.startBtn}
-          onClick={() => {
-            setOpenModal(true);
-          }}
-        >
+        <button className={css.startBtn} onClick={displayModal}>
           Start Losing Weight
         </button>
       </div>
       <div className={css.modalContainer}>
-        {openModal && <Modal closeModal={setOpenModal} />}
+        {openModal && <Modal modalVisibility={setOpenModal} />}
       </div>
     </HelmetProvider>
   );

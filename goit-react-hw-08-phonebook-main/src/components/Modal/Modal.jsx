@@ -3,7 +3,7 @@ import { MdClose } from 'react-icons/md';
 // import { NavLink } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 
-const Modal = ({ closeModal }) => {
+const Modal = ({ modalVisibility }) => {
   // const navigate = useNavigate();
   // const dispatch = useDispatch();
   // const handleClick = () => {
@@ -14,7 +14,12 @@ const Modal = ({ closeModal }) => {
   return (
     <div className={css.modalBackground}>
       <div className={css.modalContainer}>
-        <button className={css.modalCloseBtn} onclick={() => closeModal(false)}>
+        <button
+          className={css.modalCloseBtn}
+          onclick={() => {
+            modalVisibility(false);
+          }}
+        >
           <MdClose />
         </button>
         <h1 className={css.modalHeader}>
